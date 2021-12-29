@@ -1,0 +1,13 @@
+<div class="container">
+    <form (ngSubmit)="addform(f)" #f="ngForm">
+        <div><input type="textbox" placeholder="Enter Name" name="name" [(ngModel)]="name">
+        </div>
+        
+        <div><input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password"></div>
+        <button type="submit" class="btn-md btn-theme btn-block" (click)="onSubmit()">Submit</button>
+    </form>
+
+</div>
+
+<button type="submit" class="btn-md btn-theme btn-block" (click)="onlogout()">Logout</button>
+
