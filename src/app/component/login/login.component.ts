@@ -19,12 +19,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(){
     localStorage.setItem('name',this.name);
-    localStorage.setItem('password',this.password);
     sessionStorage.setItem('name',this.name);
-    sessionStorage.setItem('password',this.password);
     this._route.navigate(['/homepage'])
-  }
-  onlogout(){
-    this._route.navigate(['/']);
   }
 }

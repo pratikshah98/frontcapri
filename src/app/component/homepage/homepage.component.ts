@@ -14,6 +14,8 @@ export class HomepageComponent implements OnInit {
   }
 
   onlogout(){
+    localStorage.removeItem('name');
+    sessionStorage.removeItem('name')
     this._route.navigate(['/']);
   }
 }

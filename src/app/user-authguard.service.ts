@@ -10,13 +10,12 @@ export class UserAuthguardService {
   constructor(private _route:Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     this.name = localStorage.getItem('name') ;
-    this.password = localStorage.getItem('password');
-    if(this.name!=null || this.password!=null){
+    console.log(this.name);
+    if (this.name != null) {
       return true;
     }
     else{
-      alert('Login Account' );
-      this._route.navigate(['/']);
+       this._route.navigate(['/']);
       return false;
 
     }
